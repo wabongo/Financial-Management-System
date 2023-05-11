@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('page-title', 'Savings Accounts')
+
+
 @section('content')
 <div class="container">
     <div class="row">

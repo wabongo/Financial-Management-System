@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('page-title', 'Loan Accounts')
+
+
 @section('content')
 <div class="container">
     <div class="row">
@@ -56,7 +59,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <button class="btn btn-dark me-md-2" type="button">
+                <button class="btn" type="button">
                     <a href="{{ route('loans.create') }}">Create Loan Account</a>
                 </button>
             </div>

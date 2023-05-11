@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('page-title', 'Assets')
+
 @section('content')
 <form class="row g-3">
     <div class="col-md-6">
