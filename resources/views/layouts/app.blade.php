@@ -26,7 +26,8 @@
 
     <style>
         body {
-            font-size: .875rem;
+            font-size: .675rem;
+            background: burlywood;
 
         }
 
@@ -137,6 +138,17 @@
             -webkit-user-select: none;
             -moz-user-select: none;
             user-select: none;
+        }
+
+        h1.h2 {
+            font-family: Arial, sans-serif;
+            /* Change to your preferred font */
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            /* Change to your preferred text color */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            /* Add a shadow effect */
         }
 
         @media (min-width: 768px) {
