@@ -6,8 +6,8 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <table class="table table-hover table table-striped table-sm">
+        <div class="col-md-12 table-responsive">
+            <table class="table table-hover table-responsive table-striped table-sm">
                 <thead>
                     <tr>
                         <th scope="col">Asset ID</th>
