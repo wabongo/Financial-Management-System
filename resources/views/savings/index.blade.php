@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <table class="table">
+            <table class="table table-hover table table-striped table-sm">
                 <thead>
                     <tr>
                         <th scope="col">Account ID</th>
@@ -67,7 +67,7 @@
             </table>
 
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-black me-md-2" type="button"> <a href="{{ route('savings.create') }}">Create savings account</a></button>
+                <a href="{{ route('savings.create') }}" class="btn btn-primary">New Account</a>
             </div>
         </div>
     </div>

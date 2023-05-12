@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <table class="table table-hover">
+            <table class="table table-hover table table-striped table-sm">
                 <thead>
                     <tr>
                         <th scope="col">Asset ID</th>
@@ -67,13 +67,14 @@
                     </tr>
                 </tbody>
             </table>
-            <button class="btn btn-black me-md-2" type="button"><a href="{{ route('assets.create') }}">Create asset account</a></button>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a href="{{ route('assets.create') }}" class="btn btn-primary">New Account</a>
+            </div>
         </div>
     </div>
-</div>
-<!-- Bootstrap core CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Bootstrap core JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
-@endsection
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    @endsection
