@@ -121,7 +121,7 @@
         }
 
         .form-control-dark {
-            color: #1a237e;
+            color: #fff;
             background-color: rgba(255, 255, 255, .1);
             border-color: rgba(255, 255, 255, .1);
         }
