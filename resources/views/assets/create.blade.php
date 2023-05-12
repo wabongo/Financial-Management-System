@@ -3,6 +3,46 @@
 @section('page-title', 'Assets')
 
 @section('content')
+<style>
+    /* Form style */
+    form {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    form label {
+        color: #333;
+        font-weight: bold;
+    }
+
+    form input[type="text"] {
+        border-radius: 7.5;
+        border: none;
+        box-shadow: none;
+        background-color: #fff;
+        height: 40px;
+        margin-bottom: 15px;
+    }
+
+    form button[type="submit"] {
+        background-color: #0069d9;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    form button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    /* Company color */
+    .company-color {
+        color: #0069d9;
+    }
+</style>
 <form class="row g-3">
     <div class="col-md-6">
         <label for="inputAssetName" class="form-label">Asset Name</label>

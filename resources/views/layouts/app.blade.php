@@ -15,6 +15,7 @@
     <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- Favicons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -26,6 +27,7 @@
     <style>
         body {
             font-size: .875rem;
+
         }
 
         .feather {
@@ -103,7 +105,8 @@
             padding-bottom: .75rem;
             font-size: 1rem;
             background-color: rgba(0, 0, 0, .25);
-            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
         }
 
         .navbar .navbar-toggler {
@@ -114,11 +117,11 @@
         .navbar .form-control {
             padding: .75rem 1rem;
             border-width: 0;
-            border-radius: 0;
+            border-radius: 0.5rem;
         }
 
         .form-control-dark {
-            color: #fff;
+            color: #1a237e;
             background-color: rgba(255, 255, 255, .1);
             border-color: rgba(255, 255, 255, .1);
         }
@@ -156,8 +159,12 @@
         <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
         <div class="navbar-nav">
             <div class="nav-item text-nowrap">
-                <a class="nav-link px-3" href="#">Sign out</a>
+                <a class="nav-link px-3" href="#">
+                    <i class="fas fa-sign-out-alt"></i> Sign out
+                </a>
             </div>
+
+        </div>
         </div>
     </header>
 
@@ -167,7 +174,7 @@
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
+                            <a class="nav-link" href="{{ url('/') }}">
                                 <span data-feather="home"></span>
                                 Dashboard
                             </a>
@@ -225,6 +232,8 @@
 
     <!-- Icons -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
     <script>
         feather.replace();
     </script>

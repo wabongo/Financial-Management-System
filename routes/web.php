@@ -5,6 +5,7 @@ use App\Http\Controllers\customercontroller;
 use App\Http\Controllers\savingscontroller;
 use App\Http\Controllers\loanscontroller;
 use App\Http\Controllers\assetscontroller;
+use App\Http\Controllers\dashboardcontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
