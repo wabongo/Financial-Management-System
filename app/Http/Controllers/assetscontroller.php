@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Assets;
 use Illuminate\Http\Request;
 
 class assetscontroller extends Controller
@@ -12,7 +13,8 @@ class assetscontroller extends Controller
     public function index()
     {
         //
-        return view('assets.index');
+        $assets = Assets::all();
+        return view('assets.index', compact('assets'));
     }
 
     /**
@@ -30,6 +32,27 @@ class assetscontroller extends Controller
     public function store(Request $request)
     {
         //
+        {
+            $validatedData = $request->validate([
+                'name' => 'required',
+                'type' => 'required',
+                'purchase_price' => 'required|integer',
+                'current_value' => 'required|integer',
+                'depreciation_rate' => 'required|numeric',
+                'useful_life' => 'required|integer',
+            ]);
+
+            $assets = new Assets();
+            $assets->name = $validatedData['name'];
+            $assets->type = $validatedData['type'];
+            $assets->purchase_price = $validatedData['purchase_price'];
+            $assets->current_value = $validatedData['current_value'];
+            $assets->depreciation_rate = $validatedData['depreciation_rate'];
+            $assets->useful_life = $validatedData['useful_life'];
+            $assets->save();
+
+            return redirect('/assets');
+        }
     }
 
     /**

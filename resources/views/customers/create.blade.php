@@ -45,10 +45,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <form class="row g-3">
+            <form class="row g-3" method="post" action="{{route('customers.store')}}">
+                @csrf
                 <div class="col-md-6">
                     <label for="customerID" class="form-label">Customer ID</label>
-                    <input type="text" class="form-control" id="customerID" name="customerID">
+                    <input type="text" class="form-control" id="customerID" name="customer_id">
                 </div>
                 <div class="col-md-6">
                     <label for="name" class="form-label">Name</label>
@@ -56,7 +57,7 @@
                 </div>
                 <div class="col-12">
                     <label for="contactInfo" class="form-label">Contact Information</label>
-                    <textarea class="form-control" id="contactInfo" name="contactInfo"></textarea>
+                    <textarea class="form-control" id="contactInfo" name="contact"></textarea>
                 </div>
                 <div class="col-md-6">
                     <label for="balance" class="form-label">Balance</label>

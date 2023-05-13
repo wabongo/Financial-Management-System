@@ -43,50 +43,51 @@
         color: #0069d9;
     }
 </style>
-<form class="row g-3">
+<form class="row g-3" method="post" action="{{route('assets.store')}}">
+    @csrf
     <div class="col-md-6">
         <label for="inputAssetName" class="form-label">Asset Name</label>
-        <input type="text" class="form-control" id="inputAssetName">
+        <input type="text" class="form-control" id="AssetName" name="name">
     </div>
     <div class="col-md-6">
         <label for="inputAssetType" class="form-label">Asset Type</label>
-        <input type="text" class="form-control" id="inputAssetType">
+        <input type="text" class="form-control" id="AssetType" name="type">
     </div>
     <div class="col-12">
         <label for="inputAcquisitionDate" class="form-label">Acquisition Date</label>
-        <input type="date" class="form-control" id="inputAcquisitionDate">
+        <input type="date" class="form-control" id="AcquisitionDate" name="acquisition_date">
     </div>
     <div class="col-12">
         <label for="inputPurchasePrice" class="form-label">Purchase Price</label>
-        <input type="text" class="form-control" id="inputPurchasePrice">
+        <input type="text" class="form-control" id="PurchasePrice" name="purchase_price">
     </div>
     <div class="col-md-6">
         <label for="inputCurrentValue" class="form-label">Current Value</label>
-        <input type="text" class="form-control" id="inputCurrentValue">
+        <input type="text" class="form-control" id="CurrentValue" name="current_value">
     </div>
     <div class="col-md-6">
         <label for="inputDepreciationMethod" class="form-label">Depreciation Method</label>
-        <input type="text" class="form-control" id="inputDepreciationMethod">
+        <input type="text" class="form-control" id="DepreciationMethod" name="depreciation_method">
     </div>
     <div class="col-md-4">
         <label for="inputDepreciationRate" class="form-label">Depreciation Rate</label>
-        <input type="text" class="form-control" id="inputDepreciationRate">
+        <input type="text" class="form-control" id="DepreciationRate" name="depreciation_rate">
     </div>
     <div class="col-md-2">
         <label for="inputUsefulLife" class="form-label">Useful Life</label>
-        <input type="text" class="form-control" id="inputUsefulLife">
+        <input type="text" class="form-control" id="UsefulLife" name="useful_life">
     </div>
     <div class="col-md-6">
         <label for="inputDepreciationStartDate" class="form-label">Depreciation Start Date</label>
-        <input type="date" class="form-control" id="inputDepreciationStartDate">
+        <input type="date" class="form-control" id="DepreciationStartDate">
     </div>
     <div class="col-md-6">
         <label for="inputDisposalDate" class="form-label">Disposal Date</label>
-        <input type="date" class="form-control" id="inputDisposalDate">
+        <input type="date" class="form-control" id="inputDisposalDate" name="disposal_date">
     </div>
     <div class="col-md-6">
         <label for="inputDisposalAmount" class="form-label">Disposal Amount</label>
-        <input type="text" class="form-control" id="inputDisposalAmount">
+        <input type="text" class="form-control" id="inputDisposalAmount" name="disposal_amount">
     </div>
     <div class="col-md-6">
         <label for="inputStatus" class="form-label">Status</label>

@@ -29,43 +29,27 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($assets as $a)
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Property A</td>
-                        <td>Real Estate</td>
-                        <td>2022-01-15</td>
-                        <td>$500,000</td>
-                        <td>$550,000</td>
-                        <td>Straight-line</td>
-                        <td>5%</td>
-                        <td>20 years</td>
-                        <td>2022-01-15</td>
-                        <td></td>
-                        <td></td>
-                        <td>Active</td>
-                        <td>City, State</td>
-                        <td>John Doe</td>
-                        <td>Additional notes about Property A</td>
+                        <th scope="row">{{ $a->id }}</th>
+                        <td>{{ $a->name }}</td>
+                        <td>{{ $a->type }}</td>
+                        <td>{{ $a->purchase_date }}</td>
+                        <td>{{ number_format($a->purchase_price, 2) }}</td>
+                        <td>{{ number_format($a->current_price, 2) }}</td>
+                        <td>{{ $a->depreciation_method }}</td>
+                        <td>{{ $a->depreciation_rate }}%</td>
+                        <td>{{ $a->useful_life }} years</td>
+                        <td>{{ $a->created_at->format('Y-m-d') }}</td>
+                        <td>{{ $a->updated_at->format('Y-m-d') }}</td>
+                        <td>{{ $a->status }}</td>
+                        <td>{{ $a->location }}</td>
+                        <td>{{ $a->owner }}</td>
+                        <td>{{ $a->notes }}</td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Vehicle B</td>
-                        <td>Vehicle</td>
-                        <td>2021-05-01</td>
-                        <td>$30,000</td>
-                        <td>$25,000</td>
-                        <td>Double Declining Balance</td>
-                        <td>20%</td>
-                        <td>10 years</td>
-                        <td>2021-05-01</td>
-                        <td></td>
-                        <td></td>
-                        <td>Active</td>
-                        <td>City, State</td>
-                        <td>Jane Smith</td>
-                        <td>Additional notes about Vehicle B</td>
-                    </tr>
+                    @endforeach
                 </tbody>
+
             </table>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <a href="{{ route('assets.create') }}" class="btn btn-primary">New Account</a>

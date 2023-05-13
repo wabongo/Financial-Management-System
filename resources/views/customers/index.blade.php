@@ -21,56 +21,18 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($customers as $c)
                         <tr>
-                            <td>1</td>
-                            <td>Dave Genge</td>
-                            <td>dave@gmail.com<br>+254792647589<br>Juja</td>
-                            <td>Ksh500</td>
+                            <td>{{$c->customer_id}}</td>
+                            <td>{{$c->name}}</td>
+                            <td>{{$c->contact}}</td>
+                            <td>{{number_format($c->balance, 2)}}</td>
                             <td>Net 30</td>
                             <td>Ksh1,000</td>
                             <td>...</td>
                             <td>...</td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Jane Mwende</td>
-                            <td>jane@gmail.com<br>+254791678564<br>Mlolongo</td>
-                            <td>Ksh0</td>
-                            <td>Due on receipt</td>
-                            <td>N/A</td>
-                            <td>...</td>
-                            <td>...</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Larry Mbondo</td>
-                            <td>larry@gmail.com<br>+25479545675<br>Shakahola</td>
-                            <td>Ksh200</td>
-                            <td>Net 15</td>
-                            <td>Ksh500</td>
-                            <td>...</td>
-                            <td>...</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Alice Oloo</td>
-                            <td>alice@gmail.com<br>+2547985763<br>Bondo</td>
-                            <td>Ksh750</td>
-                            <td>Net 30</td>
-                            <td>Ksh2,000</td>
-                            <td>...</td>
-                            <td>...</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Robert Ruto</td>
-                            <td>robert@gmail.com<br>+254791567490<br>Sugoi</td>
-                            <td>Ksh1,200</td>
-                            <td>Net 30</td>
-                            <td>Ksh3,000</td>
-                            <td>...</td>
-                            <td>...</td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

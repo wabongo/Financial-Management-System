@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use Illuminate\Http\Request;
 
 class customercontroller extends Controller
@@ -12,7 +13,8 @@ class customercontroller extends Controller
     public function index()
     {
         //
-        return view('customers.index');
+        $customers = Customer::all();
+        return view('customers.index', compact('customers'));
     }
 
     /**
@@ -30,6 +32,15 @@ class customercontroller extends Controller
     public function store(Request $request)
     {
         //
+        // return $request;
+        $customer = new Customer();
+        $customer->customer_id = $request->customer_id;
+        $customer->name = $request->name;
+        $customer->contact = $request->contact;
+        $customer->balance = $request->balance;
+        $customer->save();
+
+        return redirect('/customers');
     }
 
     /**
