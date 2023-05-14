@@ -27,7 +27,6 @@
     <style>
         body {
             font-size: .675rem;
-            background: burlywood;
 
         }
 
@@ -151,6 +150,11 @@
             /* Add a shadow effect */
         }
 
+        .center {
+            display: flex;
+            justify-content: flex-end;
+        }
+
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
@@ -239,6 +243,13 @@
         </div>
     </div>
 
+    <div class="center">
+        <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+            <div>
+                <p>Copyright © 2023 - All rights reserved by David Wabongo</p>
+            </div>
+        </footer>
+    </div>
     <!-- Bootstrap core JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjwTU4fd5v+zvJb4Ap3u3aLnnNmCOOikjQtw3l1/q7bOF4pVrYppDH2ubzsa8Yz" crossorigin="anonymous"></script>
 
@@ -252,6 +263,8 @@
 
     <!-- Custom scripts -->
     <script src="dashboard.js"></script>
+
 </body>
+
 
 </html>

@@ -3,16 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Loans;
 
 class loanscontroller extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+
     public function index()
     {
-        //
-        return view('loans.index');
+        // Retrieve all loans from the database
+        $loans = Loans::all();
+
+        // Pass the loans to the view
+        return view('loans.index', compact('loans'));;
     }
 
     /**
@@ -27,11 +32,16 @@ class loanscontroller extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
     public function store(Request $request)
     {
-        //
-    }
+        // Create a new Loans instance and fill it with the request data
+        $loans = new Loans();
+        $loans->fill($request->all());
+        $loans->save();
 
+        return redirect('/loans');
+    }
     /**
      * Display the specified resource.
      */

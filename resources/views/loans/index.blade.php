@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'Loan Accounts')
+@section('page-title','Loan Accounts')
 
 
 @section('content')
@@ -11,9 +11,9 @@
                 <table class="table table-hover table table-striped table-sm">
                     <thead>
                         <tr>
-                            <th>Loan ID</th>
+                            <th>LoanID</th>
                             <th>Borrower</th>
-                            <th>Loan Amount</th>
+                            <th>LoanAmount</th>
                             <th>Interest Rate</th>
                             <th>Loan Type</th>
                             <th>Loan Term</th>
@@ -27,47 +27,37 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($loans as $l)
                         <tr>
-                            <td>1</td>
-                            <td>bwana mkuu</td>
-                            <td>Ksh10,000</td>
-                            <td>5%</td>
-                            <td>Personal Loan</td>
-                            <td>24 months</td>
-                            <td>2023-01-15</td>
-                            <td>2025-01-15</td>
-                            <td>Monthly</td>
-                            <td>Ksh450</td>
-                            <td>Ksh7,500</td>
-                            <td>Active</td>
-                            <td>2023-05-10</td>
+                            <td>{{$l->loan_Id}}</td>
+                            <td>{{$l->borrower}}</td>
+                            <td>{{$l->loan_amount}}</td>
+                            <td>{{$l->interest_rate}}</td>
+                            <td>{{$l->loan_type}}</td>
+                            <td>{{$l->loan_term}}</td>
+                            <td>{{$l->start_date}}</td>
+                            <td>{{$l->end_date}}</td>
+                            <td>{{$l->payment_frequency}}</td>
+                            <td>{{$l->payment_amount}}</td>
+                            <td>{{$l->outstanding_balance}}</td>
+                            <td>{{$l->status}}</td>
+                            <td>{{$l->last_updated}}</td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Maverick Aoko</td>
-                            <td>Ksh50,000</td>
-                            <td>4.5%</td>
-                            <td>Mortgage</td>
-                            <td>360 months</td>
-                            <td>2022-09-01</td>
-                            <td>2052-09-01</td>
-                            <td>Monthly</td>
-                            <td>Ksh300</td>
-                            <td>Ksh45,000</td>
-                            <td>Active</td>
-                            <td>2023-05-10</td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <a href="{{ route('loans.create') }}" class="btn btn-primary">New Account</a>
+                <div class="d-grid gap-2d-md-flex justify-content-md-end">
+                    <a href="{{route('loans.create')}}" class="btn btn-primary">New Account</a>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    </script>
     @endsection
