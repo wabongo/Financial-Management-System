@@ -14,5 +14,9 @@ class Customer extends Model
         'name',
         'contact',
         'balance',
+        'payment_terms',
+        'credit_limit',
+        'payment_history',
+        'notes',
     ];
 }

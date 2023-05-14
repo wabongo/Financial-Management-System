@@ -17,6 +17,10 @@ return new class extends Migration
             $table->text('name');
             $table->text('contact');
             $table->unsignedInteger('balance');
+            $table->text('payment_terms');
+            $table->unsignedInteger('credit_limit');
+            $table->text('payment_history');
+            $table->text('notes');
             $table->timestamps();
         });
     }

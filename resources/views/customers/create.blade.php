@@ -65,15 +65,15 @@
                 </div>
                 <div class="col-md-6">
                     <label for="paymentTerms" class="form-label">Payment Terms</label>
-                    <input type="text" class="form-control" id="paymentTerms" name="paymentTerms">
+                    <input type="text" class="form-control" id="paymentTerms" name="payment_terms">
                 </div>
                 <div class="col-md-6">
                     <label for="creditLimit" class="form-label">Credit Limit</label>
-                    <input type="text" class="form-control" id="creditLimit" name="creditLimit">
+                    <input type="text" class="form-control" id="creditLimit" name="credit_limit">
                 </div>
                 <div class="col-md-6">
                     <label for="paymentHistory" class="form-label">Payment History</label>
-                    <textarea class="form-control" id="paymentHistory" name="paymentHistory"></textarea>
+                    <textarea class="form-control" id="paymentHistory" name="payment_history"></textarea>
                 </div>
                 <div class="col-12">
                     <label for="notes" class="form-label">Notes/Comments</label>

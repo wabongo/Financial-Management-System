@@ -34,10 +34,7 @@ class customercontroller extends Controller
         //
         // return $request;
         $customer = new Customer();
-        $customer->customer_id = $request->customer_id;
-        $customer->name = $request->name;
-        $customer->contact = $request->contact;
-        $customer->balance = $request->balance;
+        $customer->fill($request->all());
         $customer->save();
 
         return redirect('/customers');

@@ -87,12 +87,12 @@
                 <div class="card-statistic-3 p-4">
                     <div class="card-icon card-icon-large"><i class="fas fa-shopping-cart"></i></div>
                     <div class="mb-4">
-                        <h5 class="card-title mb-0">Customers</h5>
+                        <h5 class="card-title mb-0">Balances</h5>
                     </div>
                     <div class="row align-items-center mb-2 d-flex">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center mb-0">
-                                3,243
+                                3,243K
                             </h2>
                         </div>
                         <div class="col-4 text-right">
@@ -110,7 +110,7 @@
                 <div class="card-statistic-3 p-4">
                     <div class="card-icon card-icon-large"><i class="fas fa-users"></i></div>
                     <div class="mb-4">
-                        <h5 class="card-title mb-0">Loans</h5>
+                        <h5 class="card-title mb-0">Expenses</h5>
                     </div>
                     <div class="row align-items-center mb-2 d-flex">
                         <div class="col-8">
@@ -133,12 +133,12 @@
                 <div class="card-statistic-3 p-4">
                     <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
                     <div class="mb-4">
-                        <h5 class="card-title mb-0">Savings</h5>
+                        <h5 class="card-title mb-0">Outstandings</h5>
                     </div>
                     <div class="row align-items-center mb-2 d-flex">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center mb-0">
-                                578
+                                578K
                             </h2>
                         </div>
                         <div class="col-4 text-right">
@@ -161,7 +161,7 @@
                     <div class="row align-items-center mb-2 d-flex">
                         <div class="col-8">
                             <h2 class="d-flex align-items-center mb-0">
-                                $11.61k
+                                11.61k
                             </h2>
                         </div>
                         <div class="col-4 text-right">
