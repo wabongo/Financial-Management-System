@@ -174,10 +174,50 @@
                 </div>
             </div>
         </div>
+        <div class="col-xl-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Chart</h5>
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </div>
 </div>
+<!-- Include Chart.js library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-vvQ0fwV4VU9jIHY33YsnD2Pvj6UR24z5Bb9w7v5vGwtRoXCmFLkUt3u9DqH3OqvgdADqqR5uHZfNpRY2mcK9VQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Chart Script -->
+<script>
+    // Get the canvas element
+    const ctx = document.getElementById('myChart').getContext('2d');
+
+    // Create the chart
+    new Chart(ctx, {
+        type: 'bar', // Change the chart type as needed
+        data: {
+            labels: ['Label 1', 'Label 2', 'Label 3'], // Replace with your data labels
+            datasets: [{
+                label: 'Data', // Replace with your dataset label
+                data: [10, 20, 30], // Replace with your dataset values
+                backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(75, 192, 192, 0.2)'], // Replace with your dataset background colors
+                borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(75, 192, 192, 1)'], // Replace with your dataset border colors
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
 
 <!-- Include Chart.js library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-vvQ0fwV4VU9jIHY33YsnD2Pvj6UR24z5Bb9w7v5vGwtRoXCmFLkUt3u9DqH3OqvgdADqqR5uHZfNpRY2mcK9VQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
