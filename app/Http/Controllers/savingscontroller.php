@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Savings;
 use Illuminate\Http\Request;
 
 class savingscontroller extends Controller
@@ -11,8 +12,10 @@ class savingscontroller extends Controller
      */
     public function index()
     {
-        //
-        return view('savings.index');
+        $savings = Savings::all();
+
+        // Pass the savings to the view
+        return view('savings.index', compact('savings'));;
     }
 
     /**
@@ -30,6 +33,11 @@ class savingscontroller extends Controller
     public function store(Request $request)
     {
         //
+        $savings = new Savings();
+        $savings->fill($request->all());
+        $savings->save();
+
+        return redirect('/savings');
     }
 
     /**

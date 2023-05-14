@@ -24,45 +24,21 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($savings as $s)
                     <tr>
-                        <td>1</td>
-                        <td>John Doe</td>
-                        <td>Regular Savings</td>
-                        <td>123456789</td>
-                        <td>ABC Bank</td>
-                        <td>Ksh1,000</td>
-                        <td>3.5%</td>
-                        <td>2022-01-01</td>
-                        <td>-</td>
-                        <td>Active</td>
-                        <td>2023-05-10 10:30 AM</td>
+                        <td>{{$s->account_Id}} </td>
+                        <td>{{$s->account_holder}} </td>
+                        <td>{{$s->account_type}} </td>
+                        <td>{{$s->account_number}} </td>
+                        <td>{{$s->bank_name}} </td>
+                        <td>{{$s->balance}} </td>
+                        <td>{{$s->interest_rate}} </td>
+                        <td>{{$s->start_date}} </td>
+                        <td>{{$s->end_date}} </td>
+                        <td>{{$s->status}} </td>
+                        <td>{{$s->last_updated}} </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jane Smith</td>
-                        <td>High-Interest Savings</td>
-                        <td>987654321</td>
-                        <td>XYZ Bank</td>
-                        <td>Ksh5,000</td>
-                        <td>4.0%</td>
-                        <td>2021-05-15</td>
-                        <td>-</td>
-                        <td>Active</td>
-                        <td>2023-05-10 09:15 AM</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Larry Mackenzie</td>
-                        <td>Regular Savings</td>
-                        <td>246813579</td>
-                        <td>DEF Bank</td>
-                        <td>Ksh2,500</td>
-                        <td>2.75%</td>
-                        <td>2023-02-20</td>
-                        <td>-</td>
-                        <td>Active</td>
-                        <td>2023-05-10 11:45 AM</td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
 

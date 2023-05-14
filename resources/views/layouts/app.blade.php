@@ -155,6 +155,10 @@
             justify-content: flex-end;
         }
 
+        footer {
+            margin-top: auto;
+        }
+
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
